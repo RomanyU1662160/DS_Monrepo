@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ds-monorepo/design-system": ["packages/design-system/src/index.ts"],
       "@ds-monorepo/shared-ui": ["packages/shared-ui/src/index.ts"]
     }
   },

@@ -1,0 +1,96 @@
+/* =============================================
+=            RESET CSS            =
+============================================= */
+
+/**
+ *
+ * reset all css elements using the normalize.scss package
+ * About normalize.css: https://nicolasgallagher.com/about-normalize-css/
+   *    https://www.npmjs.com/package/normalize-scss
+ */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* set up the body */
+body {
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  color: $body-font-color;
+  background-color: $white;
+  line-height: $body-line-height;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
