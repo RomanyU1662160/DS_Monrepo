@@ -1,21 +1,10 @@
-/// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/apps/react-app',
-
-  server: {
-    port: 4200,
-    host: 'localhost',
-  },
-
-  preview: {
-    port: 4300,
-    host: 'localhost',
-  },
+  cacheDir: '../../node_modules/.vite/packages/shared-ui',
 
   plugins: [react(), nxViteTsPaths()],
 
@@ -24,25 +13,14 @@ export default defineConfig({
   //  plugins: [ nxViteTsPaths() ],
   // },
 
-  build: {
-    outDir: './build/react-app',
-    reportCompressedSize: true,
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
-  },
-
   test: {
     globals: true,
-    cache: {
-      dir: '../../node_modules/.vitest',
-    },
+    cache: { dir: '../../node_modules/.vitest' },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../coverage/apps/react-app',
+      reportsDirectory: '../../coverage/packages/shared-ui',
       provider: 'v8',
     },
   },
