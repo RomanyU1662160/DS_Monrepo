@@ -18,6 +18,7 @@
   "ignoreFiles": [
     "sassdoc/**/*.css",
     "node_modules/**/*.css",
-    "src/lib/**/*.css"
+    "src/lib/**/*.css",
+    "src/base/**/*.css"
   ]
 }

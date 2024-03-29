@@ -4,7 +4,7 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/shared-ui',
+  cacheDir: '../../node_modules/.vite/packages/components-ui',
 
   plugins: [react(), nxViteTsPaths()],
 
@@ -20,7 +20,7 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../coverage/packages/shared-ui',
+      reportsDirectory: '../../coverage/packages/components-ui',
       provider: 'v8',
     },
   },
