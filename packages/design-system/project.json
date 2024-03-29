@@ -4,20 +4,6 @@
   "sourceRoot": "packages/design-system/src",
   "projectType": "library",
   "targets": {
-    "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "./packages/design-system/dist",
-        "main": "packages/design-system/src/global.scss",
-        "tsConfig": "packages/design-system/tsconfig.lib.json",
-        "assets": [],
-        "project": "packages/design-system/package.json",
-        "compiler": "swc",
-        "format": ["cjs", "esm"],
-        "extractCss": true
-      }
-    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],
@@ -25,6 +11,15 @@
         "lintFilePatterns": ["packages/design-system/**/*.scss"],
         "formatter": "compact"
       }
+    },
+    "doc:generate": {
+      "cache": true
+    },
+    "lint:fix": {
+      "cache": true
+    },
+    "build": {
+      "cache": true
     }
   },
   "tags": []

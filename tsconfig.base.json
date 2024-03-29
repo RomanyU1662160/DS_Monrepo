@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ds-monorepo/design-system": ["packages/design-system/src/index.ts"]
+      "@ds-monorepo/components-ui": ["packages/components-ui/src/index.ts"],
+      "@ds-monorepo/design-system": ["packages/design-system/src/global.scss"]
     }
   },
   "exclude": ["node_modules", "tmp"]
