@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ComponentsUi from './components-ui';
+import Button from './Button';
 
-describe('ComponentsUi', () => {
+describe('Button', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ComponentsUi />);
+    const { baseElement } = render(<Button />);
     expect(baseElement).toBeTruthy();
   });
 });

@@ -1,1 +1,1 @@
-export * from './lib/components-ui';
+export * from './atoms/button/Button';
