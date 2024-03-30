@@ -1,14 +1,12 @@
 import styles from './Button.module.css';
 
 /* eslint-disable-next-line */
-export interface ButtonProps {}
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  text: string;
+}
 
-export function Button(props: ButtonProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to Button!</h1>
-    </div>
-  );
+export function Button({ text }: ButtonProps) {
+  return <button className={styles.button}>{text}</button>;
 }
 
 export default Button;

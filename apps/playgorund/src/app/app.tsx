@@ -1,21 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
 
-import NxWelcome from './nx-welcome';
-
 import { Route, Routes, Link } from 'react-router-dom';
+import { Button } from '@ds-monorepo/components-ui';
+import '@ds-monorepo/design-system';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="playground" />
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
+      <Button text="Welcome btn" className="btn-primary" />
       <div role="navigation">
         <ul>
           <li>

@@ -20,7 +20,7 @@
   "ignoreFiles": [
     "sassdoc/**/*.css",
     "node_modules/**/*.css",
-    "src/lib/**/*.css",
+    "lib/**/*.css",
     "dist/**/*.css"
   ],
   "overrides": [

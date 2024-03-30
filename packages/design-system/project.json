@@ -18,7 +18,7 @@
     "lint:fix": {
       "cache": true
     },
-    "build": {
+    "compile": {
       "cache": true
     }
   },
