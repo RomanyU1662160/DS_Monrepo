@@ -8,7 +8,8 @@
     "compile:ds": "echo \"Compiling SCSS to css\" && npx nx compile design-system && echo \"Compile Design system complete!\"",
     "doc:generate": "echo \"generating sass docs in design-system/sassdoc \" && npx nx doc:generate design-system && echo \"Sassdoc genrated view sassdoc/index.html \"",
     "lerna:compile:ds": "echo \"Compiling SCSS to css\" && npx lerna run compile --scope=\"design-system\" --stream && echo \"Compile Design system complete!\"",
-    "lerna:doc:generate": "echo \"generating sass docs in design-system/sassdoc \" && npx lerna run doc:generate --scope=\"design-system\" --stream && echo \"Sassdoc genrated view sassdoc/index.html \""
+    "lerna:doc:generate": "echo \"generating sass docs in design-system/sassdoc \" && npx lerna run doc:generate --scope=\"design-system\" --stream && echo \"Sassdoc genrated view sassdoc/index.html \"",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
