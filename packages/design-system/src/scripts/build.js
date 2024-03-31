@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require('fs');
 
 const sassSource = 'src/global.scss';
-const cssTarget = 'src/lib/global.css';
+const cssTarget = 'lib/global.css';
 
 // Compile the scss file into css
 const compile = (source, target) => {
@@ -17,7 +17,11 @@ const compile = (source, target) => {
     outputStyle: 'compressed', // compressed, expanded, nested, compact
     includePaths: [path.resolve('src')], // This is needed to resolve the @import statements in the scss files to the correct path ./src
     sourceMap: true, // This is needed to generate the source map
+    extractCss: true, // This is needed to extract the css from the result object
   });
+  if (!fs.existsSync('lib')) {
+    fs.mkdirSync('lib');
+  }
   // Write the result to the css file
   return fs.writeFileSync(path.resolve(target), result.css.toString());
 };
@@ -30,12 +34,12 @@ const getallComponents = () => {
     const files = fs.readdirSync(`src/${folder}`); // read the directory and return an array of file names in the directory eg. ['button.scss', 'input.scss']
 
     // return object with source and target to use it in the compileComponents function
-    const components = files.map((fileName) => {
+    files.map((fileName) => {
       const source = path.resolve(`src/${folder}/${fileName}`);
       const updatedExtension = fileName.replace('.scss', '.css');
-      const target = path.resolve(`src/lib/components/${updatedExtension}`);
-      if (!fs.existsSync(`src/lib/components`)) {
-        fs.mkdirSync(`src/lib/components`, { recursive: true });
+      const target = path.resolve(`lib/components/${updatedExtension}`);
+      if (!fs.existsSync(`lib/components`)) {
+        fs.mkdirSync(`lib/components`, { recursive: true });
       }
       return allComponents.push({
         source,

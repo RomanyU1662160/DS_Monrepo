@@ -4,7 +4,7 @@ import Button from './Button';
 
 describe('Button', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Button text="test" />);
+    const { baseElement } = render(<Button />);
     expect(baseElement).toBeTruthy();
   });
 });
