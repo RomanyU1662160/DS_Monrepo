@@ -1,9 +1,12 @@
 {
   "name": "design-system",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/design-system/src",
+  "sourceRoot": "packages/design-system",
   "projectType": "library",
   "targets": {
+    "build": {
+      "cache": true
+    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],

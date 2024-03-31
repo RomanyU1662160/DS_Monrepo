@@ -16,9 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@ds-monorepo/components-ui": ["packages/components-ui/src/index.ts"],
-      "@ds-monorepo/design-system": [
-        "packages/design-system/lib/components/button.css"
-      ]
+      "@ds-monorepo/design-system": ["packages/design-system/lib/global.css"]
     }
   },
   "exclude": ["node_modules", "tmp"]

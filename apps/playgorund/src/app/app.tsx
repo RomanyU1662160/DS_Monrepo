@@ -3,12 +3,19 @@ import styles from './app.module.css';
 
 import { Route, Routes, Link } from 'react-router-dom';
 import { Button } from '@ds-monorepo/components-ui';
-import '@ds-monorepo/design-system';
 
 export function App() {
   return (
     <div>
-      <Button text="Welcome btn" className="btn-primary" />
+      <Button
+        // text="Welcome  btn"
+        className="btn-warning"
+        onClick={() => {
+          console.log('clicked');
+        }}
+      >
+        Welcome Button
+      </Button>
       <div role="navigation">
         <ul>
           <li>

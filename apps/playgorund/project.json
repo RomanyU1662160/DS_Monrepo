@@ -4,7 +4,6 @@
   "sourceRoot": "apps/playgorund/src",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project playground --web",
   "targets": {
     "start:": {
       "executor": "@nx/react",
