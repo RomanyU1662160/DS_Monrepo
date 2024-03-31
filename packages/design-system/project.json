@@ -5,7 +5,8 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "cache": true
+      "cache": true,
+      "dependsOn": ["husky"]
     },
     "stylelint": {
       "executor": "nx-stylelint:lint",

@@ -1,0 +1,2 @@
+npx nx lint:fix design-system
+npx nx doc:generate design-system
