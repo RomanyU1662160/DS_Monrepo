@@ -3,10 +3,12 @@ import styles from './app.module.css';
 
 import { Route, Routes, Link } from 'react-router-dom';
 import { Button } from '@ds-monorepo/components-ui';
+import Header from '../components/common/Header/Header';
 
 export function App() {
   return (
     <div>
+      <Header />
       <Button
         // text="Welcome  btn"
         className="btn-warning"
