@@ -10,16 +10,6 @@ import ProductsPage from '../pages/ProductsPage/Products';
 export function App() {
   return (
     <div>
-      <Panel />
-      <Button
-        // text="Welcome  btn"
-        className="btn-warning"
-        onClick={() => {
-          console.log('clicked');
-        }}
-      >
-        Welcome Button
-      </Button>
       <div role="navigation">
         <ul>
           <li>
@@ -30,6 +20,20 @@ export function App() {
           </li>
         </ul>
       </div>
+
+      <Panel />
+      <hr />
+      <Button
+        // text="Welcome  btn"
+        className="btn-primary-light btn-md"
+        onClick={() => {
+          console.log('clicked');
+        }}
+      >
+        Welcome Button
+      </Button>
+      <hr />
+
       <Routes>
         <Route
           path="/"

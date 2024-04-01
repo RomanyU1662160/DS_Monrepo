@@ -1,0 +1,95 @@
+@import '../foundation/all';
+
+/**
+ *
+ * This will generate .text-primary {
+  color: $primary;
+}
+
+.text-primary-light {
+  color: $primary-light;
+}
+
+.text-primary-dark {
+  color: $primary-dark;
+}
+ *
+ */
+
+@each $key, $val in $brand-colors {
+  .text-#{$key} {
+    color: #{$val};
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-wrap: break-word;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-wrap {
+  white-space: normal;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-overline {
+  text-decoration: overline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-none {
+  text-decoration: none;
+}
+
+.text-bold {
+  font-weight: bold;
+}

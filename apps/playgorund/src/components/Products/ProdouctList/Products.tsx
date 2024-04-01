@@ -12,7 +12,7 @@ export interface ProductsProps {
 export function ProductsList({ products }: ProductsProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to Products!</h1>
+      <h1 className="text-primary-dark text-center">Welcome to Products!</h1>
       <div className={styles['products']}>
         {products.map((product, index) => (
           <ProductItem key={index} card={product} />

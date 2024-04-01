@@ -1,0 +1,12 @@
+@mixin button {
+  color: $white;
+  padding: map-get($spaces, 'sm') map-get($spaces, 'lg');
+  border-radius: 5px;
+  @content;
+}
+
+@mixin button-size($size) {
+  color: $white;
+  padding: map-get($spaces, $size) map-get($spaces, $size);
+  @content;
+}
