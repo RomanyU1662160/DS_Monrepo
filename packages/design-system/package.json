@@ -14,6 +14,7 @@
     "gulp": "gulp",
     "compile": "node src/scripts/build.js",
     "build": "node src/scripts/build.js",
-    "package:name": "echo \"Name: $npm_package_name\""
+    "package:name": "echo \"Name: $npm_package_name\"",
+    "dev": "nodemon --exec \"npm run build\" --watch src --ext js,scss"
   }
 }

@@ -88,6 +88,9 @@
     },
     "build": {
       "inputs": ["production", "^production"]
+    },
+    "dev": {
+      "dependsOn": ["^dev"]
     }
   }
 }

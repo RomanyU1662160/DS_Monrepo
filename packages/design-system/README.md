@@ -40,7 +40,14 @@ This will generate documentation based on the comments in your Sass files and ma
 
 ## Compiling Sass to CSS
 
-You can compile the Sass code into CSS using one of the two commands provided:
+You can compile the Sass code into CSS using one of the below commands provided:
+
+**watch changes with nodemon:**
+To compile Sass/js files and watch all changes:
+
+```bash
+npm run dev
+```
 
 **Using Gulp:**
 To compile Sass using Gulp, run the following command:
