@@ -1,0 +1,16 @@
+/// This mixin is used to flex centered wrapper.
+/// @group mixins
+/// @access public
+/// @name flex-center
+/// @example - apply display flex for containers and center items.
+/// .card {
+/// font-size: 16px;
+///
+///  @include flex-center
+/// }
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

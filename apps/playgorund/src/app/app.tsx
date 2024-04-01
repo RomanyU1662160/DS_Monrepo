@@ -3,12 +3,14 @@ import styles from './app.module.css';
 
 import { Route, Routes, Link } from 'react-router-dom';
 import { Button } from '@ds-monorepo/components-ui';
-import Header from '../components/common/Header/Header';
+import Panel from '../components/common/Panel/Panel';
+import ProductsList from '../components/Products/ProdouctList/Products';
+import ProductsPage from '../pages/ProductsPage/Products';
 
 export function App() {
   return (
     <div>
-      <Header />
+      <Panel />
       <Button
         // text="Welcome  btn"
         className="btn-warning"
@@ -24,7 +26,7 @@ export function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/page-2">Page 2</Link>
+            <Link to="/products">Products list</Link>
           </li>
         </ul>
       </div>
@@ -38,14 +40,7 @@ export function App() {
             </div>
           }
         />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
+        <Route path="/products" element={<ProductsPage />} />
       </Routes>
       {/* END: routes */}
     </div>

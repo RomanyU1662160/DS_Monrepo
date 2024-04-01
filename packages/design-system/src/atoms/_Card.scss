@@ -1,0 +1,44 @@
+@import '../foundation/all';
+
+.flex-center {
+  @include flex-center;
+}
+
+.card-primary {
+  color: $black;
+  padding: map-get($spaces, 'sm');
+
+  > .card-title {
+    color: $white;
+    background-color: $primary;
+  }
+}
+
+.card-secondary {
+  background-color: $secondary;
+  color: $white;
+}
+
+.card-warning {
+  background-color: $warning;
+  color: $white;
+}
+
+.card-title {
+  font-size: $h2-font-size;
+  padding: map-get($spaces, 'md');
+  font-weight: $h2-font-weight;
+}
+
+.card-body {
+  @include flex-center;
+
+  padding: map-get($spaces, 'md');
+  background-color: $gray-100;
+}
+
+.card-footer {
+  padding: map-get($spaces, 'md');
+  background-color: $gray-300;
+  border-top: 1px solid $gray-200;
+}

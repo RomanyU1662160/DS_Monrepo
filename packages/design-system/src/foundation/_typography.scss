@@ -1,3 +1,5 @@
+@import './variables';
+
 /* Body Text Sizes */
 $body-font-size: var(--body-font-size, $fs-sm) !default;
 $body-font-weight: var(--body-font-weight, $fw-regular) !default;
