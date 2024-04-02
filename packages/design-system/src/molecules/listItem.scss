@@ -1,0 +1,13 @@
+@import '../foundation/all';
+
+.list-item {
+  @include flex-start;
+
+  padding: map-get($spaces, 'sm');
+  cursor: pointer;
+}
+
+.selected {
+  background-color: $primary-light;
+  color: $white;
+}

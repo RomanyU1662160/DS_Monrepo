@@ -2,7 +2,7 @@
 import styles from './app.module.css';
 
 import { Route, Routes, Link } from 'react-router-dom';
-import { Button } from '@ds-monorepo/components-ui';
+import { Button, Tick, TickList } from '@ds-monorepo/components-ui';
 import Panel from '../components/common/Panel/Panel';
 import ProductsList from '../components/Products/ProdouctList/Products';
 import ProductsPage from '../pages/ProductsPage/Products';
@@ -10,16 +10,6 @@ import ProductsPage from '../pages/ProductsPage/Products';
 export function App() {
   return (
     <div>
-      <Panel />
-      <Button
-        // text="Welcome  btn"
-        className="btn-warning"
-        onClick={() => {
-          console.log('clicked');
-        }}
-      >
-        Welcome Button
-      </Button>
       <div role="navigation">
         <ul>
           <li>
@@ -30,6 +20,24 @@ export function App() {
           </li>
         </ul>
       </div>
+      <hr />
+      <TickList
+        items={[{ text: 'Item 1' }, { text: 'Item 2' }, { text: 'Item 3' }]}
+      />
+      <hr />
+      <Panel />
+      <hr />
+      <Button
+        // text="Welcome  btn"
+        className="btn-primary-light btn-md"
+        onClick={() => {
+          console.log('clicked');
+        }}
+      >
+        Welcome Button
+      </Button>
+      <hr />
+
       <Routes>
         <Route
           path="/"

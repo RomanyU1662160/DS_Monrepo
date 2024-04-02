@@ -1,22 +1,17 @@
 @import '../foundation/all';
 
-.btn-primary {
-  background-color: $primary;
-  color: $white;
-  padding: 10px 20px;
-  border-radius: 5px;
+@each $key, $value in $brand-colors {
+  .btn-#{$key} {
+    @include button {
+      background-color: #{$value};
+    }
+  }
 }
 
-.btn-secondary {
-  background-color: $secondary;
-  color: $white;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-.btn-warning {
-  background-color: $warning;
-  color: $white;
-  padding: 10px 20px;
-  border-radius: 5px;
+@each $key, $value in $spaces {
+  .btn-#{$key} {
+    @include button-size(#{$key}) {
+      background-color: #{$key};
+    }
+  }
 }
