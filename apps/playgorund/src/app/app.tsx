@@ -2,7 +2,7 @@
 import styles from './app.module.css';
 
 import { Route, Routes, Link } from 'react-router-dom';
-import { Button, Tick } from '@ds-monorepo/components-ui';
+import { Button, Tick, TickList } from '@ds-monorepo/components-ui';
 import Panel from '../components/common/Panel/Panel';
 import ProductsList from '../components/Products/ProdouctList/Products';
 import ProductsPage from '../pages/ProductsPage/Products';
@@ -21,7 +21,9 @@ export function App() {
         </ul>
       </div>
       <hr />
-      <Tick className="tick-success" />
+      <TickList
+        items={[{ text: 'Item 1' }, { text: 'Item 2' }, { text: 'Item 3' }]}
+      />
       <hr />
       <Panel />
       <hr />

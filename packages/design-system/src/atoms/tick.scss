@@ -25,12 +25,12 @@
 @each $key, $val in $brand-colors {
   .tick-#{$key} {
     color: #{$val};
-    display: inline-block;
     transform: rotate(45deg);
     min-width: map-get($spaces, 'sm');
     min-height: map-get($spaces, 'lg');
     border-bottom: map-get($spaces, 'xsm') solid #{$val};
     border-right: map-get($spaces, 'xsm') solid #{$val};
+    margin-right: map-get($spaces, 'md');
   }
 }
 
